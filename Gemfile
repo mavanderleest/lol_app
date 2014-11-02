@@ -9,6 +9,7 @@ gem 'faker', '1.1.2'
 gem 'will_paginate'
 gem 'tzinfo-data'
 gem 'best_in_place', github: 'aaronchi/best_in_place'
+gem 'figaro'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
