@@ -19,5 +19,5 @@ production:
   encoding: unicode
   database: lol_app_production
   pool: 5
-  username: mavanderleest
+  username: deployer
   password:
