@@ -3,10 +3,10 @@ lock '3.2.1'
 
 set :application, 'lol_app'
 # set :user, 'deployer'
-set :deploy_to, "/home/deployer/apps/#{application}"
+set :deploy_to, "/home/deployer/apps/lol_app"
 set :deploy_via, :remote_cache
 set :use_sudo, false
-set :repo_url, "git@github.com:mavanderleest/#{application}.git"
+set :repo_url, "git@github.com:mavanderleest/lol_app.git"
 set :rbenv_ruby, '2.1.4'
 set :branch, 'master'
 
@@ -42,13 +42,13 @@ namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
     task command, roles: :app, except: {no_release: true} do
-      run "/etc/init.d/unicorn_#{application} #{command}"
+      run "/etc/init.d/unicorn_lol_app #{command}"
     end
   end
 
   task :setup_config, roles: :app do
-    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
-    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/lol_app"
+    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_lol_app"
     run "mkdir -p #{shared_path}/config"
     put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}."
