@@ -12,6 +12,12 @@ gem 'best_in_place', github: 'aaronchi/best_in_place'
 gem 'figaro'
 gem 'pg'
 
+# Use unicorn as the app server
+gem 'unicorn'
+
+# Deploy with Capistrano
+gem 'capistrano'
+
 group :development, :test do
   # gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '~> 2.14.0'
