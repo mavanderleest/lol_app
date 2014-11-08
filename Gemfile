@@ -16,11 +16,14 @@ gem 'pg'
 gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano'
+gem 'capistrano', '~> 3.1'
 
 group :development, :test do
   # gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '~> 2.14.0'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv', '~> 2.0', require: false
   # The following optional lines are part of the advanced setup.
   # gem 'guard-rspec', '2.5.0'
   # gem 'spork-rails', '4.0.0'
