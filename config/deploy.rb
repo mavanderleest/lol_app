@@ -9,7 +9,7 @@ set :rbenv_ruby, '2.1.4'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, "/home/#{user}/apps/#{application}"
+set :deploy_to, "/home/deployer/apps/lol_app"
 
 # Default value for :scm is :git
 set :scm, :git
