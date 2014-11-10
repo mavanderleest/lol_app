@@ -23,7 +23,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.14.0'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
-  gem 'capistrano-rbenv', '~> 2.0', require: false
   # The following optional lines are part of the advanced setup.
   # gem 'guard-rspec', '2.5.0'
   # gem 'spork-rails', '4.0.0'
@@ -32,7 +31,7 @@ end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
+  gem 'capybara', '~> 3.2'
   gem 'factory_girl_rails', '4.2.0'
   # gem 'cucumber-rails', '1.4.0', :require => false
   # gem 'database_cleaner', github: 'bmabey/database_cleaner'

@@ -1,1 +1,0 @@
-server '104.200.17.237', user: 'deployer', roles: %w{web app db}
