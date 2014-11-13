@@ -1,9 +1,14 @@
+<% provide(:title, 'Lobby') if current_user %>
 <div class="cover-box">
 	<div class="row">
 		<div class="small-6 small-centered text-center columns">
 			<h2 class="quote-intro">Extend your senses</h2>
-			<%= link_to 'Sign up', signup_path, class: "button expand radius" %>
-			<%= link_to 'Sign in', signin_path, class: "button expand radius" %>
+			<% if current_user %>
+				Lorem ipsum
+			<% else %>
+				<%= link_to 'Sign up', signup_path, class: "button expand radius" %>
+				<%= link_to 'Sign in', signin_path, class: "button expand radius" %>
+			<% end %>
 		</div>
 	</div>
 </div>
